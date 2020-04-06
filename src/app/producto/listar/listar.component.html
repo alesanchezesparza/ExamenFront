@@ -1,0 +1,55 @@
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <div class="card">
+        <div class="card-header">
+            <h3>Productos</h3>
+        </div>
+        <div class="card-body">
+            <table class="table table-hover">
+                <thead>
+                    <tr class="text-center">
+                        <td>ITEM</td>
+                        <td>NOMBRES</td>
+                        <td>CANTIDAD</td>
+                        <td>CODIGO DE INVENTARIO</td>
+                        <td>ACCIONES</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let producto of productos" class="text-center">
+                        <td>{{producto.item}}</td>
+                        <td>{{producto.nombre}}</td>
+                        <td>{{producto.cantidad}}</td>
+                        <td>{{producto.codigoInventario}}</td>
+                        <td>
+                            <button (click)="delete(producto)" class="w3-button w3-white">Elminar</button>
+                             <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-green">Info</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+                <div id="id01" class="w3-modal w3-animate-opacity">
+                  <div class="w3-modal-content w3-card-4">
+                    <header class="w3-container w3-teal"> 
+                      <span onclick="document.getElementById('id01').style.display='none'" 
+                      class="w3-button w3-large w3-display-topright">&times;</span>
+                      <h2>Informacion</h2>
+                    </header>
+                        <tr *ngFor="let producto of productos" class="text-center"  >
+                              <p><td>ITEM</td></p> 
+                        <p><td>{{producto.item}}</td></p>
+                            <p><td>nombre</td></p> 
+                        <p><td>{{producto.nombre}}</td></p>
+                            <p><td>cantidad</td></p> 
+                        <p><td>{{producto.cantidad}}</td></p>
+                        <p><td>codigoInventario</td></p> 
+                        <p><td>{{producto.codigoInventario}}</td></p>
+                        </tr>
+                    <footer class="w3-container w3-teal">
+                        <p>Evaluacion Sahuayo</p>
+                    </footer>
+                  </div>
+                </div>
+        </div>
+</div>

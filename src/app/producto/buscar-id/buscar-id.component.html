@@ -1,0 +1,37 @@
+<div class="container col-md-6">
+    <div class="card">
+        <div class="card-header">
+            <h3>Buscar por ITEM</h3>
+        </div>
+        <div class="card-body">
+            <form action="">
+                <div class="form-group">
+                    <label for="">ITEM</label>
+                    <input [(ngModel)]="producto.item" name="item" type="text" class="form control">
+                </div>
+                <button (click)="buscarId(producto)" class="btm btm-danger">Buscar</button>
+            </form>
+        </div>
+        <div class="card-body">
+            <table class="table table-hover">
+                <thead>
+                    <tr class="text-center">
+                        <td>ITEM</td>
+                        <td>NOMBRES</td>
+                        <td>CANTIDAD</td>
+                        <td>CODIGO DE INVANTARIO</td>
+                        <td>ACCIONES</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="text-center">
+                        <td>{{producto.item}}</td>
+                        <td>{{producto.nombre}}</td>
+                        <td>{{producto.cantidad}}</td>
+                        <td>{{producto.codigoInventario}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
